@@ -210,10 +210,10 @@ const EMO = {
   'がっかり':{c:'#7a93b8',f:'がっかりした',m:'たのしみにしていたことが、だめになったときの気もち'},
   'さびしい':{c:'#6e7fd0',f:'さびしい',m:'だれかといっしょにいたいのに、いられないときの気もち'},
   'くやしい':{c:'#d9623b',f:'くやしい',m:'がんばったのに、思うようにいかなかったときの気もち'},
-  'おこっている':{c:'#d93b3b',f:'おこっている',m:'いやなことをされて、ゆるせないとかんじる気もち'},
-  'いやだ':{c:'#b0527a',f:'いやだと思った',m:'「それはやめてほしい」とかんじる気もち'},
+  'おこっている':{c:'#d93b3b',f:'おこっている',m:'いやなことをされて、ゆるせないと感じる気もち'},
+  'いやだ':{c:'#b0527a',f:'いやだと思った',m:'「それはやめてほしい」と感じる気もち'},
   'ふあん':{c:'#6b8a8f',f:'ふあんな',m:'この先どうなるかわからなくて、おちつかない気もち'},
-  'どきどき':{c:'#e06c9a',f:'どきどきしている',m:'きんちょうして、むねがはやくうごくかんじ'},
+  'どきどき':{c:'#e06c9a',f:'どきどきしている',m:'きんちょうして、むねがはやくうごく感じ'},
   'こわい':{c:'#5b5f8a',f:'こわい',m:'よくないことがおきそうで、にげたくなる気もち'},
   'しんぱい':{c:'#7d8fa3',f:'しんぱいな',m:'だれかやなにかがだいじょうぶか、気になる気もち'},
   'はずかしい':{c:'#ee7f9f',f:'はずかしい',m:'人に見られて、かくれたくなる気もち'},
@@ -222,7 +222,7 @@ const EMO = {
   'とくい':{c:'#e2a400',f:'とくいな',m:'じぶんでできて、むねをはりたくなる気もち'},
   'ありがたい':{c:'#e88f6a',f:'ありがたい',m:'だれかにたすけてもらって、心があたたかくなる気もち'},
   'こまった':{c:'#8a8fa8',f:'こまった',m:'どうしたらいいか、わからないときの気もち'},
-  'もやもや':{c:'#8e7fa6',f:'もやもやしている',m:'すっきりしなくて、心に何かがのこっているかんじ'},
+  'もやもや':{c:'#8e7fa6',f:'もやもやしている',m:'すっきりしなくて、心に何かがのこっている感じ'},
   'あせる':{c:'#d98a2b',f:'あせっている',m:'「いそがなきゃ」と思って、おちつかない気もち'}
 };
 const LEVELS = ['ちょっぴり','少し','まあまあ','とても','ものすごく'];
@@ -261,7 +261,7 @@ const EPS = [
   order:['ルナにはお気に入りのクッションがある','コンがだまってつかっていた','しっぽをふくらませて「フーッ」と言った'],
   voices:[
    {t:'「おこるのはよくないよ」',r:'ルナはそっぽをむきました。おこったわけを聞いてもらえなくて、もやもやがのこっています。',mood:'angry'},
-   {t:'「クッションくらい、かしてあげなよ」',r:'ルナは「大事なものなのに……」とつぶやきました。気もちを小さくあつかわれたようにかんじたみたいです。',mood:'sad'},
+   {t:'「クッションくらい、かしてあげなよ」',r:'ルナは「大事なものなのに……」とつぶやきました。気もちを小さくあつかわれたように感じたみたいです。',mood:'sad'},
    {t:'「だまってつかわれて、いやだったんだね」',r:'ルナのしっぽが少しずつ元にもどりました。「そうなの。ひとこと言ってほしかったの」。おこったわけをわかってもらえて、おちついてきました。',mood:'calm',best:1}],
   key:'おこる気もちのうらには、「大事にしてほしかった」がかくれていることがある。'},
  {id:'kurumi',name:'クルミ',kind:'squirrel',label:'りす',mood:'worried',
@@ -285,7 +285,7 @@ const EPS = [
    {t:'「あはは、おもしろいころびかた！」',r:'ペンはもっと小さくなってしまいました。わらわれると、はずかしい気もちが大きくなることがあります。',mood:'shy'},
    {t:'「こおり、つるつるだもんね。わたしもころんだことあるよ」',r:'ペンははねのすきまからそっと顔を出しました。「ほんと？」。じぶんだけじゃないとわかって、はずかしさが少しやわらぎました。',mood:'calm',best:1},
    {t:'（なにも言わずに、そっと手をかす）',r:'ペンはだまって立ち上がり、小さくうなずきました。ことばがなくても、やさしさがつたわることもあります。',mood:'calm',best:1}],
-  key:'はずかしさは、「見られた」とかんじたときに出てくる。'},
+  key:'はずかしさは、「見られた」と感じたときに出てくる。'},
  {id:'choco',name:'チョコ',kind:'hamster',label:'ハムスター',mood:'frustrated',
   story:'ハムスターのチョコは、かけっこのれんしゅうを毎日がんばってきました。でも今日のかけっこでは、あと少しのところでぬかされて2ばんでした。チョコはほっぺをふくらませて、地面を足でけっています。',
   emos:[['がっかり','m'],['うれしい','f'],['おこっている','m'],['くやしい','g'],['こわい','f'],['ほっとした','f']],
@@ -477,7 +477,7 @@ const MORE = {
    voices:[
     {t:'「わざとじゃないんだから、おこらないの」',r:'チョコはほっぺをぷくっとふくらませました。わざとじゃなくても、いやだった気もちはほんものです。',mood:'frustrated'},
     {t:'「がんばって作ったのに、くずされてはらが立つよね」',r:'チョコは「そうなの！せっかく作ったのに！」と言って、大きくいきをはきました。おこったわけを聞いてもらえて、ふみならす足が止まりました。',mood:'calm',best:1},
-    {t:'「また作ればいいじゃん」',r:'チョコは「かんたんに言わないで」とそっぽをむきました。がんばった時間を、かるく見られたようにかんじたみたいです。',mood:'angry'}],
+    {t:'「また作ればいいじゃん」',r:'チョコは「かんたんに言わないで」とそっぽをむきました。がんばった時間を、かるく見られたように感じたみたいです。',mood:'angry'}],
    key:'わざとじゃなくても、いやだった気もちはほんもの。'}],
  irumi:[
   {mood:'happy',
@@ -779,18 +779,18 @@ function draw(){
   if(S.step===1 && S.picked.length>1){
     const [A,B] = S.picked, ca = EMO[A].c, cb = EMO[B].c, SZ = [[58,18],[48,28],[38,38],[28,48],[18,58]];
     p += `<p class="kicker">2　気もちのバランス</p><p class="q">${ep.name}の「${A}」と「${B}」、どっちが大きいと思う？</p>
-      <p class="lead">これに正しいこたえはありません。あなたがかんじたバランスでいいよ。</p>
+      <p class="lead">これに正しいこたえはありません。あなたが感じたバランスでいいよ。</p>
       <div class="balrow">${SZ.map(([a,b],n)=>`<button class="bal ${S.bal===n?'on':''}" data-bal="${n}" aria-label="${['「'+A+'」がずっと大きい','「'+A+'」が少し大きい','同じくらい','「'+B+'」が少し大きい','「'+B+'」がずっと大きい'][n]}"><span style="width:${a}px;height:${a}px;background:${ca}"></span><span style="width:${b}px;height:${b}px;background:${cb}"></span></button>`).join('')}</div>
       <div class="ballab"><b><i style="background:${ca}"></i>${A}が大きい</b><b>${B}が大きい<i style="background:${cb}"></i></b></div>`;
     if(S.bal>=0){ const big = S.bal<2 ? A : B, small = S.bal<2 ? B : A, far = S.bal===0 || S.bal===4;
-      p += `<p class="note good pop">${S.bal===2 ? '「'+A+'」と「'+B+'」が、同じくらいあるとかんじたんだね。' : '「'+big+'」が'+(far?'ずっと':'少し')+'大きくて、「'+small+'」も'+(far?'少し':'')+'ある、とかんじたんだね。'}気もちのバランスは、人によってちがっていいんだよ。</p><button class="go" data-next>つぎへ</button>`; }
+      p += `<p class="note good pop">${S.bal===2 ? '「'+A+'」と「'+B+'」が、同じくらいあると感じたんだね。' : '「'+big+'」が'+(far?'ずっと':'少し')+'大きくて、「'+small+'」も'+(far?'少し':'')+'ある、と感じたんだね。'}気もちのバランスは、人によってちがっていいんだよ。</p><button class="go" data-next>つぎへ</button>`; }
   }
   else if(S.step===1){
     p += `<p class="kicker">2　気もちの大きさ</p><p class="q">${ep.name}の「${main}」は、どのくらいだと思う？</p>
-      <p class="lead">これに正しいこたえはありません。あなたがかんじた大きさでいいよ。</p><div class="levels">`;
+      <p class="lead">これに正しいこたえはありません。あなたが感じた大きさでいいよ。</p><div class="levels">`;
     LEVELS.forEach((t,n)=>{ const d = 22+n*13; p += `<button class="lv ${S.lv===n?'on':''}" data-lv="${n}"><span style="width:${d}px;height:${d}px"></span>${t}</button>`; });
     p += `</div>`;
-    if(S.lv>=0) p += `<p class="note good pop">あなたは「${LEVELS[S.lv]}${main}」とかんじたんだね。気もちの大きさは、人によってちがっていいんだよ。</p><button class="go" data-next>つぎへ</button>`;
+    if(S.lv>=0) p += `<p class="note good pop">あなたは「${LEVELS[S.lv]}${main}」と感じたんだね。気もちの大きさは、人によってちがっていいんだよ。</p><button class="go" data-next>つぎへ</button>`;
   }
   if(S.step===2){
     const fr = ep.frame || (S.picked.length>1 ? `${ep.name}が「${S.picked[0]}」と「${S.picked[1]}」の気もちになったのは、` : `${ep.name}が${EMO[main].f}のは、`);
@@ -833,7 +833,7 @@ function finish(){
     <p class="stars">${starRow(ep.id)}</p>
     <p class="key">${ep.key}</p>
     ${S.deep ? '<p class="note good">このおはなしで、気もちを2つ見つけたよ。★がピンクになりました。</p>' : (ep.need>1 ? '' : '<p class="lead">つぎにこのおはなしをあそぶときは、気もちを2つさがせるよ。</p>')}
-    <p class="lead">ずかんに入ったことば</p><div class="row">${[...new Set(S.picked.concat(goods))].map(w=>chip(w,'','disabled')).join('')}</div>
+    <p class="lead">ずかんに入ったことば</p><div class="row">${[...new Set(S.picked)].map(w=>chip(w,'','disabled')).join('')}</div>
     <p class="q" style="font-weight:900;margin-top:10px">あなたにも、にた気もちになったことある？</p>
     <div class="row">${['ある','ない','わからない'].map(t=>`<button class="chip ${S.same===t?'on':''}" data-same="${t}">${t}</button>`).join('')}</div>`;
   if(S.same) h += `<p class="note good pop">${S.same==='ある'?'そのときの気もちも、'+ep.name+'と同じように大事な気もちだよ。':S.same==='ない'?'そうなんだね。いつかにたことがあったら、'+ep.name+'を思い出してね。':'すぐに思い出せなくてもだいじょうぶ。'}</p>`;
@@ -946,7 +946,7 @@ app.addEventListener('click', ev=>{
   if('next' in d){
     if(S.step===4){ const L = save.done[ep.id] || (save.done[ep.id] = []); if(!L.includes(S.k)) L.push(S.k);
       if(S.deep){ const D = save.deep[ep.id] || (save.deep[ep.id] = []); if(!D.includes(S.k)) D.push(S.k); }
-      S.picked.concat(ep.emos.filter(e=>e[1]==='g').map(e=>e[0])).forEach(w=>{ if(!save.words.includes(w)) save.words.push(w); });
+      S.picked.forEach(w=>{ if(!save.words.includes(w)) save.words.push(w); });
       keep(); S.fin = true; S.mood = 'happy'; sfx('fanfare'); return draw(); }
     sfx('go'); S.step++; S.msg = ''; S.ok = false; return draw();
   }
@@ -960,8 +960,8 @@ app.addEventListener('click', ev=>{
       if(S.picked.length>=need){ sfx('ok'); S.ok = true;
         const rest = goods.filter(w=>!S.picked.includes(w));
         S.msg = need>1 ? '「'+S.picked.join('」と「')+'」。2つの気もちを見つけたね。ひとつのできごとで、気もちが2つうごくこともあるんだね。'
-          : fit==='g' ? '「'+d.emo+'」。'+ep.name+'のようすにぴったりだね。'+(rest.length?'もしかすると、「'+rest.join('」「')+'」の気もちもいっしょにあるかも。':'')
-          : '「'+d.emo+'」も、あるかもしれないね。それもひとつのとらえかた。「'+goods.join('」「')+'」の気もちもいっしょにあるかも。';
+          : fit==='g' ? '「'+d.emo+'」。'+ep.name+'のようすにぴったりだね。'+'でも、気もちはひとつだけじゃないかも。ほかの気もちも、いっしょにあるかもしれないね。'
+          : '「'+d.emo+'」。うん、その気もちもありそうだね。いいところに気づいたね。でも、気もちはひとつだけじゃないかも。ほかの気もちも、いっしょにあるかもしれないね。';
       } else { sfx('tap'); S.msg = '「'+d.emo+'」。うん、ありそうだね。'; }
     }
     return draw();
