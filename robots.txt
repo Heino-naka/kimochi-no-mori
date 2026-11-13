@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://heino-naka.github.io/kimochi-no-mori/sitemap.xml
